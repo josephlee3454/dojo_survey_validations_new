@@ -1,0 +1,40 @@
+﻿@model Form
+  <form action="/results"  method="post">
+    <div >
+      <label asp-for="Name">Your Name: </label>
+      <input  asp-for="Name">
+      <span  asp-validation-for="Name"></span>
+    </div>
+    <div >
+      <label asp-for="Locations">Dojo Location: </label>
+      <select  asp-for="Locations">
+        <option value="San Jose">San Jose</option>
+        <option value="Seattle">Seattle</option>
+        <option value="Dallas">Austin</option>
+        <option value="Chicago">Chicago</option>
+     
+      </select>
+      <span  asp-validation-for="Locations"></span>
+    </div>
+    <div >
+      <label asp-for="Languages">Dojo Location: </label>
+      <select asp-for="Languages" >
+        <option value="HTML">HTML</option>
+        <option value="CSS">CSS</option>
+        <option value="JavaScript">JavaScript</option>
+        <option value="MySQL">MySQL</option>
+        <option value="Python">Python</option>
+        <option value="Mean">Mean</option>
+        <option value="C#">C#</option>
+        <option value=".Net">ASP.NET</option>
+      </select>
+      <span  asp-validation-for="Languages"></span>
+    </div>
+    <div >
+      <label asp-for="Comments">Comment (Optional)</label>
+      <br/>
+      <textarea asp-for="Comments" cols="5" rows="5" ></textarea>
+      <span  asp-validation-for="Comments"></span>
+    </div>
+    <button type="submit" >Submit</button>
+  </form>
